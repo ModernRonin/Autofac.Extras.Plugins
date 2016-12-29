@@ -13,9 +13,10 @@ You have a whole lot of types which have to be differently implemented in both p
 If this scenario sounds familiar to you, this Autofac.Extra is for you.
 
 ## Usage
-For detailed usage, see the ```src/Samples``` directory here at github.
 
-A short overview though:
+Install the nuget package [Autofac.Extras.Plugins](https://www.nuget.org/packages/Autofac.Extras.Plugins/).
+
+A short overview:
 
 ```
 builder.RegisterType<GermanHelloWorld>().AsPlugin().Provide<IHelloWorld>("UniqueNameOfMyPlugin");
@@ -31,6 +32,10 @@ registers ```StandardFinisher``` as the default implementation of ```IFinisher``
 builder.RegisterType<GermanFinisher>().AsPlugin().Override<IFinisher>("UniqueNameOfMyOtherPlugin");
 ```
 overrides the service ```IFinisher``` with ```GermanFinisher``` in the context of *UniqueNameOfMyOtherPlugin*.
+
+
+For a complete example, see the ```src/Samples``` directory here at github.
+
 
 ## Scope Limitation
 Sometimes you will want to load plugins dynamically, that is, upon deployment of the main application you do not yet know which plugins will be available. In such a case you will need to tell Autofac 
