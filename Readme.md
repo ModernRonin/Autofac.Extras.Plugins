@@ -36,3 +36,6 @@ overrides the service ```IFinisher``` with ```GermanFinisher``` in the context o
 Sometimes you will want to load plugins dynamically, that is, upon deployment of the main application you do not yet know which plugins will be available. In such a case you will need to tell Autofac 
 which assemblies to load. For example, load all assemblies in a ```Plugins``` folder somewhere in your local user data. This functionality is not part of this extra, however. 
 If you need this additional bit, you might wanna take a look at https://github.com/DenisBiondic/Autofac.Extras.ModuleDiscovery. Please note, however, that I have no first-hand experience with that package.
+
+## License
+This package is governed by the [Apache 2.0](http://opensource.org/licenses/Apache-2.0) license.
